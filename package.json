@@ -1,0 +1,8 @@
+{
+  "name": "de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730": "./index.js"
+  }
+}
