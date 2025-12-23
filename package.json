@@ -4,5 +4,8 @@
   "type": "module",
   "bin": {
     "de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730": "./index.js"
+  },
+  "scripts": {
+    "test": "node test/basic.test.js"
   }
 }
