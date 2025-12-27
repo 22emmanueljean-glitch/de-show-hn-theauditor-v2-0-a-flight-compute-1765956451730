@@ -1,0 +1,6 @@
+{
+  "domain": "utility",
+  "problem": "Transform input data",
+  "feature": "Read stdin and output JSON",
+  "interface": "CLI"
+}
