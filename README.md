@@ -12,3 +12,9 @@ npx de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730 "hello world"
 - add tests
 - add transformations
 - add CI
+
+
+## Monetization
+
+This project offers a hosted API with paid tiers.
+Billing is usage-based.
