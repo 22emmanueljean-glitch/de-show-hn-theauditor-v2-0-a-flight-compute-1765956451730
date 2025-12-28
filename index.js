@@ -1,9 +1,38 @@
-#!/usr/bin/env node
+/**
+ * de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730
+ * Domain: utility
+ * Problem: Transform input data
+ * Feature: Read stdin and output JSON
+ */
 
-const input = process.argv.slice(2).join(' ');
-if (!input) {
-  console.log('Usage: de-show-hn-theauditor-v2-0-a-flight-compute-1765956451730 <text>');
-  process.exit(0);
+import fs from "fs";
+
+function readInput() {
+  const arg = process.argv[2];
+  if (arg) return arg;
+
+  try {
+    return fs.readFileSync(0, "utf8").trim();
+  } catch {
+    return "";
+  }
 }
 
-console.log(input.trim());
+function transform(input) {
+  return {
+    original: input,
+    length: input.length,
+    upper: input.toUpperCase(),
+    words: input.split(/\s+/).filter(Boolean).length,
+    created_at: new Date().toISOString()
+  };
+}
+
+const input = readInput();
+
+if (!input) {
+  console.error("No input provided");
+  process.exit(1);
+}
+
+console.log(JSON.stringify(transform(input), null, 2));
